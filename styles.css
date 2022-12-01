@@ -1,0 +1,26 @@
+@font-face {
+  font-family: Rubik;
+  src: url('./Rubik/Rubik.ttf');
+  font-weight: 400;
+}
+
+body {
+    margin: 0;
+    background-image: url('./фруктовощи.tiff');
+    background-size: 100vw auto;
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 20px;
+    font-family: Rubik;
+    font-weight: 400;
+}
+
+#calculator {
+  width: 500px;
+}
