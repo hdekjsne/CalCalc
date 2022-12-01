@@ -6,6 +6,8 @@
 
 :root {
   --bgcolor: #0E0715;
+  --text-color: #C4B9CF;
+  --legend-color: #D1A914;
 }
 
 body {
@@ -13,7 +15,7 @@ body {
   background-image: url('./bg.tiff');
   background-size: 100vw auto;
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
 
   display: flex;
   flex-direction: column;
@@ -32,7 +34,7 @@ body {
 
 legend {
   padding: 5px 10px;
-  background-color: #D1A914;
+  background-color: var(--legend-color);
   border-radius: 10px;
   color: #0E0715;
 }
@@ -95,6 +97,7 @@ fieldset {
 
   padding: 8px 8px;
   border-radius: 10px;
+  border: 1px solid var(--text-color);
   background-color: transparent;
 }
 
@@ -144,4 +147,39 @@ a {
 
 .hint:hover > .hint-hidden {
   display: block;
+}
+
+#buttons {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+button {
+  width: 130px;
+  padding: 8px;
+  border-radius: 10px;
+  border: none;
+
+  font-size: 18px;
+  color: #0E0715;
+
+  background-color: #D1A914;
+
+}
+
+#result {
+  width: 500px;
+  display: none;
+}
+
+#result div {
+  align-items: flex-end;
+}
+
+.final-result {
+  font-weight: bold;
+  background-color: #F24444;
+  color: var(--text-color);
+  padding: 5px 10px;
+  border-radius: 10px;
 }
