@@ -4,23 +4,144 @@
   font-weight: 400;
 }
 
+:root {
+  --bgcolor: #0E0715;
+}
+
 body {
-    margin: 0;
-    background-image: url('./фруктовощи.tiff');
-    background-size: 100vw auto;
-    width: 100vw;
-    height: 100vh;
+  margin: 0;
+  background-image: url('./bg.tiff');
+  background-size: 100vw auto;
+  width: 100vw;
+  height: 100vh;
 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 
-    font-size: 20px;
-    font-family: Rubik;
-    font-weight: 400;
+  font-size: 18px;
+  font-family: Rubik;
+  font-weight: 400;
+  color: #C4B9CF;
 }
 
 #calculator {
   width: 500px;
+}
+
+legend {
+  padding: 5px 10px;
+  background-color: #D1A914;
+  border-radius: 10px;
+  color: #0E0715;
+}
+
+fieldset {
+  background-color: rgba(14, 7, 21, 0.8);
+  padding: 20px 15px;
+  margin: 30px;
+  border: 2px solid #C4B9CF;
+  border-radius: 10px;
+}
+
+#genders {
+  padding-top: 10px;
+  display: flex;
+  justify-content: space-around;
+}
+
+#female,
+#male {
+  display: none;
+}
+
+#female+label,
+#male+label {
+  margin-right: 20px;
+  display: inline-block;
+  padding: 2px 10px;
+}
+
+#female:checked+label,
+#male:checked+label {
+  border-radius: 10px;
+  box-shadow: 0px 0px 0px 1px #C4B9CF inset;
+}
+
+#fisical-data {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.fd-div {
+  display: flex;
+  flex-direction: column;
+}
+
+.fd-div>label {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+#age,
+#height,
+#weight {
+  width: 70px;
+  font-size: 18px;
+  text-align: center;
+  color: #C4B9CF;
+
+  padding: 8px 8px;
+  border-radius: 10px;
+  background-color: transparent;
+}
+
+#stresses input {
+  display: none;
+}
+
+#stresses input:checked+label {
+  box-shadow: 0px 0px 0px 1px #C4B9CF inset;
+  border-radius: 20px;
+}
+
+#stresses label {
+  display: inline-block;
+  padding: 2px 10px;
+}
+
+.stress-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  
+  border-bottom: 1px solid #C4B9CF;
+  padding: 10px;
+}
+
+a {
+  text-decoration: none;
+  color: #C4B9CF;
+}
+
+.hint {
+  position: relative;
+}
+
+.hint-hidden {
+  position: absolute;
+  left: 200%;
+
+  padding: 15px;
+  border-radius: 10px;
+  border: 1px solid #C4B9CF;
+  background-color: #0E0715;
+  width: 200px;
+  display: none;
+}
+
+.hint:hover > .hint-hidden {
+  display: block;
 }

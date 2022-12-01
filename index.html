@@ -1,22 +1,60 @@
 <!DOCTYPE html>
 <html lang="ru">
-    <head>
-        <meta charset="UTF-8">
-        <title>Счётчик калорий</title>
-        <link rel="stylesheet" href="styles.css" type="text/css">
-    </head>
-    <section id="calculator">
-      <form action="#">
-        <fieldset>
-          <div id="gender-div">
-            <label for="">sex
-              <input type="radio">male
-              <input type="radio">female
-            </label>
-          </div>
-        </fieldset>
-      </form>
-    </section>
-    <section id="result"></section>
-    <script></script>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Счётчик калорий</title>
+  <link rel="stylesheet" href="styles.css" type="text/css">
+</head>
+<section id="calculator">
+  <form action="#">
+    <fieldset id="genders">
+      <legend id="gender-span">пол</legend>
+      <input type="radio" name="gender" id="female"><label for="female">женский</label>
+      <input type="radio" name="gender" id="male"><label for="male">мужской</label>
+    </fieldset>
+    <fieldset id="fisical-data">
+      <div class="fd-div"><label for="age">возраст</label><input type="text" id="age"></div>
+      <div class="fd-div"><label for="height">рост</label><input type="text" id="height"></div>
+      <div class="fd-div"><label for="weight">вес</label><input type="text" id="weight"></div>
+    </fieldset>
+    <fieldset id="stresses">
+      <legend>физическая нагрузка</legend>
+      <div class="stress-container">
+        <input type="radio" name="stress" id="min"><label for="min">минимальная</label>
+        <div class="separator"></div>
+        <a href="" class="hint">?
+          <div class="hint-hidden">сидячая работа и нет физических нагрузок</div>
+        </a>
+      </div>
+      <div class="stress-container">
+        <input type="radio" name="stress" id="low"><label for="low">низкая</label>
+        <a href="" class="hint">?
+          <div class="hint-hidden">редкие, нерегулярные тренировки, активность в быту</div>
+        </a>
+      </div>
+      <div class="stress-container">
+        <input type="radio" name="stress" id="middle"><label for="middle">средняя</label>
+        <a href="" class="hint">?
+          <div class="hint-hidden">тренировки 3-5 раз в неделю</div>
+        </a>
+      </div>
+      <div class="stress-container">
+        <input type="radio" name="stress" id="high"><label for="high">высокая</label>
+        <a href="" class="hint">?
+          <div class="hint-hidden">тренировки 6-7 раз в неделю</div>
+        </a>
+      </div>
+      <div class="stress-container" style="border: none;">
+        <input type="radio" name="stress" id="hardcore"><label for="hardcore">очень высокая</label>
+        <a href="" class="hint">?
+          <div class="hint-hidden">тренировки больше 7 раз в неделю и физическая нагрузка на работе</div>
+        </a>
+      </div>
+    </fieldset>
+  </form>
+</section>
+<section id="result"></section>
+<script></script>
+
 </html>
