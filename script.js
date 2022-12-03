@@ -1,15 +1,15 @@
-const submitButton = document.querySelector('#submit'); // подключили кнопку рассчёта
-const resetButton = document.querySelector('#reset'); // подключили кнопку сброса
-const resultSection = document.querySelector('#result'); // подключили секцию с результатом
+const submitButton = document.querySelector('#submit');
+const resetButton = document.querySelector('#reset');
+const resultSection = document.querySelector('#result');
 
-let gender = 0; // это счётчик индекса пола
-let stress = 0; // это счётчик индекса нагрузки
+let gender = 0;
+let stress = 0;
 
-const age = document.querySelector('#age');  // это мы присоединили инпуты физ. данных к js
+const age = document.querySelector('#age');
 const height = document.querySelector('#height');
 const weight = document.querySelector('#weight');
 
-const norm = document.querySelector('.norm'); //это мы соединили спаны с js
+const norm = document.querySelector('.norm');
 const less = document.querySelector('.less');
 const more = document.querySelector('.more');
 
@@ -44,7 +44,7 @@ function calc() {
   let valueForLess = 0;
   let valueForMore = 0;
 
-  if (document.querySelector('#female').checked === true) { // выбираем пол
+  if (document.querySelector('#female').checked === true) {
     gender = -1;
   } else if (document.querySelector('#male').checked === true) {
     gender = 1;
