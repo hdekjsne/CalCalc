@@ -14,7 +14,29 @@ const less = document.querySelector('.less');
 const more = document.querySelector('.more');
 
 function checkFullfillness() {
-  // подсветка незаполненных полей
+  if (age.value == '' || age.value <= 0 || age.value > 150) {
+    age.textContent = '';
+    age.style.border = '1px solid red';
+    resultSection.style.display = 'none';
+  } else {
+    age.style.border = '1px solid #C4B9CF'
+  }
+  if (height.value == '' || height.value <= 0 || height.value > 300) {
+    height.textContent = '';
+    height.style.border = '1px solid red';
+    resultSection.style.display = 'none';
+  } else {
+    height.style.border = '1px solid #C4B9CF'
+  }
+  if (weight.value == '' || weight.value <= 0 || weight.value > 600) {
+    weight.textContent = '';
+    weight.style.border = '1px solid red';
+    resultSection.style.display = 'none';
+  } else {
+    weight.style.border = '1px solid #C4B9CF'
+  }
+
+  event.preventDefault();
 }
 
 function calc() {
@@ -26,8 +48,6 @@ function calc() {
     gender = -1;
   } else if (document.querySelector('#male').checked === true) {
     gender = 1;
-  } else {
-    // добавить действие в случае, если забыли выбрать пол
   }
   
   if (document.querySelector('#min').checked === true) {
@@ -57,6 +77,8 @@ function calc() {
 
   resultSection.style.display = 'block';
 
+  checkFullfillness();
+
   event.preventDefault();
 }
 
@@ -67,7 +89,15 @@ function clear () {
   height.value = '';
   weight.value = '';
 
+  age.style.border = '1px solid #C4B9CF'
+  height.style.border = '1px solid #C4B9CF'
+  weight.style.border = '1px solid #C4B9CF'
+
   document.querySelector('#middle').checked = true;
+
+  resultSection.style.display = 'none';
+
+  event.preventDefault();
 }
 
 submitButton.addEventListener('click', calc);
