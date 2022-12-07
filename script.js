@@ -62,9 +62,9 @@ function calc() {
     stress = document.querySelector('#hardcore').value;
   }
 
-  if (gender = -1) {
+  if (gender === -1) {
     valueForNorm = Math.floor(((10 * Number(weight.value)) + (6.25 * Number(height.value)) - (5 * Number(age.value)) - 161) * Number(stress));
-  } else {
+  } else if (gender === 1) {
     valueForNorm = Math.floor(((10 * Number(weight.value)) + (6.25 * Number(height.value)) - (5 * Number(age.value)) + 5) * Number(stress));
   }
 
