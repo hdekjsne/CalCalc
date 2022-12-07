@@ -93,7 +93,7 @@ function clear () {
   height.style.border = '1px solid #C4B9CF'
   weight.style.border = '1px solid #C4B9CF'
 
-  document.querySelector('#middle').checked = true;
+  document.querySelector('#min').checked = true;
 
   resultSection.style.display = 'none';
 
