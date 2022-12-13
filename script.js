@@ -96,9 +96,42 @@ function clear () {
   document.querySelector('#min').checked = true;
 
   resultSection.style.display = 'none';
+  resetButton.style.display = 'none';
 
   event.preventDefault();
 }
+
+function showButton() {
+  let count = 0;
+  if (age.value != '' || height.value != '' || weight.value != '') {
+    count++;
+  }
+  if (document.querySelector('#min').checked !== true) {
+    count++;
+  }
+  if (document.querySelector('#male').checked !== true) {
+    count++
+  }
+
+  if (count > 0) {
+    resetButton.style.display = 'block';
+  } else if (count === 0) {
+    resetButton.style.display = 'none';
+  }
+}
+
+age.addEventListener('input', showButton);
+height.addEventListener('input', showButton);
+weight.addEventListener('input', showButton);
+
+document.querySelector('#female').addEventListener('change', showButton);
+document.querySelector('#male').addEventListener('click', showButton);
+
+document.querySelector('#min').addEventListener('click', showButton);
+document.querySelector('#low').addEventListener('click', showButton);
+document.querySelector('#middle').addEventListener('click', showButton);
+document.querySelector('#high').addEventListener('click', showButton);
+document.querySelector('#hardcore').addEventListener('click', showButton);
 
 submitButton.addEventListener('click', calc);
 resetButton.addEventListener('click', clear);
